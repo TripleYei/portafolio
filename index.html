@@ -198,24 +198,25 @@
                 </ul>
             </div>
             <div class="copyright">TripleYei 2025</div>
-		<div class="chat-container">
-	         <!-- Icono flotante para abrir el chat -->
-	    <div id="chatIcon" class="chat-icon" onclick="toggleChat()">
-	        💬
-	    </div>
-	
-	    <!-- Contenedor del chatbot -->
-	    <div class="chat-container" id="chatContainer">
-	        <div class="chat-header">
-	            <span>Chatbot</span>
-	            <button class="close-btn" onclick="toggleChat()">X</button>
-	        </div>
-	        <div class="chat-box" id="chatBox"></div>
-	        <div class="input-container">
-	            <input type="text" id="userInput" placeholder="Escribe un mensaje..." onkeypress="checkKey(event)">
-	            <button onclick="sendMessage()">Enviar</button>
-	        </div>
-	    </div>
+		<!-- Botón para abrir el chat -->
+		  <div id="chat-icon">
+		    <img src="https://img.icons8.com/ios-filled/50/000000/chat.png" alt="Chatbot" onclick="openChat()">
+		  </div>
+		
+		  <!-- Ventana del chatbot -->
+		  <div id="chat-container" class="hidden">
+		    <div id="chat-box">
+		      <div id="chat-header">
+		        <span>Chatbot</span>
+		        <button id="close-btn" onclick="closeChat()">X</button>
+		      </div>
+		      <div id="chat-content">
+		        <div id="chat-output"></div>
+		        <input type="text" id="chat-input" placeholder="Escribe un mensaje..." onkeydown="checkEnter(event)">
+		        <button onclick="sendMessage()">Enviar</button>
+		      </div>
+		    </div>
+		  </div>
 
         </div>
     </footer>
