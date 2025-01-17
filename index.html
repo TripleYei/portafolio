@@ -198,22 +198,11 @@
                 </ul>
             </div>
             <div class="copyright">TripleYei 2025</div>
-	      <!-- Icono para abrir el chatbot -->
-    <div id="chat-icon" onclick="toggleChatbot()">
-        💬
+	<div class="chat-container">
+        <div class="chat-box" id="chatBox"></div>
+        <input type="text" id="userInput" placeholder="Escribe un mensaje..." onkeypress="checkKey(event)">
+        <button onclick="sendMessage()">Enviar</button>
     </div>
-
-    <!-- Contenedor del chatbot -->
-    <div id="chatbot-container" class="hidden">
-        <div id="chat-header">
-            <span>Chatbot</span>
-            <button id="close-chat" onclick="toggleChatbot()">❌</button>
-        </div>
-        <div id="chat-content">
-            <!-- El chat será generado aquí -->
-        </div>
-        <input type="text" id="user-input" placeholder="Escribe un mensaje..." onkeydown="if(event.key === 'Enter') sendMessage()">
-    </div>		
         </div>
     </footer>
 			
