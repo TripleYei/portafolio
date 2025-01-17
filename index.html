@@ -198,7 +198,8 @@
                 </ul>
             </div>
             <div class="copyright">TripleYei 2025</div>
-	     <div id="chat-icon" onclick="toggleChatbot()">
+	      <!-- Icono para abrir el chatbot -->
+    <div id="chat-icon" onclick="toggleChatbot()">
         💬
     </div>
 
@@ -206,14 +207,13 @@
     <div id="chatbot-container" class="hidden">
         <div id="chat-header">
             <span>Chatbot</span>
-            <button id="close-chat" onclick="toggleChatbot()">Cerrar</button>
+            <button id="close-chat" onclick="toggleChatbot()">❌</button>
         </div>
         <div id="chat-content">
             <!-- El chat será generado aquí -->
         </div>
         <input type="text" id="user-input" placeholder="Escribe un mensaje..." onkeydown="if(event.key === 'Enter') sendMessage()">
-    </div>
-      <!-- termina el chatbot -->				
+    </div>		
         </div>
     </footer>
 			
